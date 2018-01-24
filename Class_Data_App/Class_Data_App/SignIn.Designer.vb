@@ -22,8 +22,87 @@ Partial Class SignIn
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnEnter = New System.Windows.Forms.Button()
+        Me.txtUser = New System.Windows.Forms.TextBox()
+        Me.lblUser = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.SuspendLayout()
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Location = New System.Drawing.Point(63, 185)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 0
+        Me.btnCancel.Text = "Clear"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'btnEnter
+        '
+        Me.btnEnter.Location = New System.Drawing.Point(179, 185)
+        Me.btnEnter.Name = "btnEnter"
+        Me.btnEnter.Size = New System.Drawing.Size(75, 23)
+        Me.btnEnter.TabIndex = 1
+        Me.btnEnter.Text = "Enter"
+        Me.btnEnter.UseVisualStyleBackColor = True
+        '
+        'txtUser
+        '
+        Me.txtUser.Location = New System.Drawing.Point(154, 45)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(100, 20)
+        Me.txtUser.TabIndex = 2
+        '
+        'lblUser
+        '
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Location = New System.Drawing.Point(63, 48)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(60, 13)
+        Me.lblUser.TabIndex = 3
+        Me.lblUser.Text = "User Name"
+        '
+        'lblPassword
+        '
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.Location = New System.Drawing.Point(66, 104)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(59, 13)
+        Me.lblPassword.TabIndex = 4
+        Me.lblPassword.Text = "Password: "
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(154, 104)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(100, 20)
+        Me.txtPassword.TabIndex = 5
+        '
+        'SignIn
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.ClientSize = New System.Drawing.Size(314, 233)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.lblPassword)
+        Me.Controls.Add(Me.lblUser)
+        Me.Controls.Add(Me.txtUser)
+        Me.Controls.Add(Me.btnEnter)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Name = "SignIn"
         Me.Text = "SignIn"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnEnter As Button
+    Friend WithEvents txtUser As TextBox
+    Friend WithEvents lblUser As Label
+    Friend WithEvents lblPassword As Label
+    Friend WithEvents txtPassword As TextBox
 End Class
