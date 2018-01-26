@@ -22,9 +22,29 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.btnLogout = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'btnLogout
+        '
+        Me.btnLogout.Location = New System.Drawing.Point(98, 207)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogout.TabIndex = 0
+        Me.btnLogout.Text = "Log Out"
+        Me.btnLogout.UseVisualStyleBackColor = True
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.btnLogout)
+        Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.ResumeLayout(False)
+
     End Sub
 
+    Friend WithEvents btnLogout As Button
 End Class

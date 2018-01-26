@@ -35,7 +35,7 @@ Partial Class SignIn
         Me.btnCancel.Location = New System.Drawing.Point(63, 185)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancel.TabIndex = 0
+        Me.btnCancel.TabIndex = 3
         Me.btnCancel.Text = "Clear"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
@@ -44,7 +44,7 @@ Partial Class SignIn
         Me.btnEnter.Location = New System.Drawing.Point(179, 185)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(75, 23)
-        Me.btnEnter.TabIndex = 1
+        Me.btnEnter.TabIndex = 2
         Me.btnEnter.Text = "Enter"
         Me.btnEnter.UseVisualStyleBackColor = True
         '
@@ -53,7 +53,7 @@ Partial Class SignIn
         Me.txtUser.Location = New System.Drawing.Point(154, 45)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(100, 20)
-        Me.txtUser.TabIndex = 2
+        Me.txtUser.TabIndex = 0
         '
         'lblUser
         '
@@ -61,7 +61,7 @@ Partial Class SignIn
         Me.lblUser.Location = New System.Drawing.Point(63, 48)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(60, 13)
-        Me.lblUser.TabIndex = 3
+        Me.lblUser.TabIndex = 5
         Me.lblUser.Text = "User Name"
         '
         'lblPassword
@@ -79,7 +79,7 @@ Partial Class SignIn
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
-        Me.txtPassword.TabIndex = 5
+        Me.txtPassword.TabIndex = 1
         '
         'SignIn
         '
