@@ -119,6 +119,24 @@
     <Compile Include="SignIn.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UpdateClass.Designer.vb">
+      <DependentUpon>UpdateClass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInstructor.Designer.vb">
+      <DependentUpon>UpdateInstructor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInstructor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStudent.Designer.vb">
+      <DependentUpon>UpdateStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddClass.resx">
@@ -141,6 +159,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClass.resx">
+      <DependentUpon>UpdateClass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInstructor.resx">
+      <DependentUpon>UpdateInstructor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStudent.resx">
+      <DependentUpon>UpdateStudent.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
