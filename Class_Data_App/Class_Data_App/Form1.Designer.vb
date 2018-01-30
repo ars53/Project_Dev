@@ -23,28 +23,41 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.dgvDisplay = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvDisplay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(98, 207)
+        Me.btnLogout.Location = New System.Drawing.Point(174, 322)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(75, 23)
         Me.btnLogout.TabIndex = 0
         Me.btnLogout.Text = "Log Out"
         Me.btnLogout.UseVisualStyleBackColor = True
         '
+        'dgvDisplay
+        '
+        Me.dgvDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDisplay.Location = New System.Drawing.Point(12, 29)
+        Me.dgvDisplay.Name = "dgvDisplay"
+        Me.dgvDisplay.Size = New System.Drawing.Size(415, 287)
+        Me.dgvDisplay.TabIndex = 1
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.ClientSize = New System.Drawing.Size(429, 357)
+        Me.Controls.Add(Me.dgvDisplay)
         Me.Controls.Add(Me.btnLogout)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.dgvDisplay, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents btnLogout As Button
+    Friend WithEvents dgvDisplay As DataGridView
 End Class

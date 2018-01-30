@@ -4,7 +4,7 @@
 Public Class SignIn
 
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
-        Dim connection As New SqlConnection With {.ConnectionString = "Server=essql1.walton.uark.edu;Database=isys4283F1715; Trusted_Connection=yes"}
+        Dim connection As New SqlConnection With {.ConnectionString = "Server=essql1.walton.uark.edu;Database=arshephe; Trusted_Connection=yes"}
         Dim command As New SqlCommand("Select * FROM Logins where USERNAME = @username AND Password = @password", connection)
         command.Parameters.Add("@username", SqlDbType.VarChar).Value = txtUser.Text
         command.Parameters.Add("@password", SqlDbType.VarChar).Value = txtPassword.Text
