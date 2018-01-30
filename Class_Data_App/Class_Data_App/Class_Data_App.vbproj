@@ -72,6 +72,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClass.Designer.vb">
+      <DependentUpon>AddClass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddClass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudent.Designer.vb">
+      <DependentUpon>AddStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeacher.Designer.vb">
+      <DependentUpon>AddTeacher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeacher.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="db.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -103,6 +121,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddClass.resx">
+      <DependentUpon>AddClass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacher.resx">
+      <DependentUpon>AddTeacher.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
