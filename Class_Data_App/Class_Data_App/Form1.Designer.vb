@@ -36,10 +36,13 @@ Partial Class Form1
         Me.ClassesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstructorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgvInstructor = New System.Windows.Forms.DataGridView()
         Me.dgvStudent = New System.Windows.Forms.DataGridView()
         Me.picHome = New System.Windows.Forms.PictureBox()
-        Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnFirstClass = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
         CType(Me.dgvClass, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvInstructor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,7 +62,7 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AddToolStripMenuItem, Me.ShowToolStripMenuItem, Me.UpdateToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AddToolStripMenuItem, Me.ShowToolStripMenuItem, Me.UpdateToolStripMenuItem, Me.DetailsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(588, 24)
@@ -120,20 +123,32 @@ Partial Class Form1
         'ClassesToolStripMenuItem
         '
         Me.ClassesToolStripMenuItem.Name = "ClassesToolStripMenuItem"
-        Me.ClassesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClassesToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.ClassesToolStripMenuItem.Text = "Classes"
         '
         'StudentsToolStripMenuItem
         '
         Me.StudentsToolStripMenuItem.Name = "StudentsToolStripMenuItem"
-        Me.StudentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.StudentsToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.StudentsToolStripMenuItem.Text = "Students"
         '
         'InstructorsToolStripMenuItem
         '
         Me.InstructorsToolStripMenuItem.Name = "InstructorsToolStripMenuItem"
-        Me.InstructorsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InstructorsToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.InstructorsToolStripMenuItem.Text = "Instructors"
+        '
+        'UpdateToolStripMenuItem
+        '
+        Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.UpdateToolStripMenuItem.Text = "Update"
+        '
+        'DetailsToolStripMenuItem
+        '
+        Me.DetailsToolStripMenuItem.Name = "DetailsToolStripMenuItem"
+        Me.DetailsToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.DetailsToolStripMenuItem.Text = "Details"
         '
         'dgvInstructor
         '
@@ -156,18 +171,31 @@ Partial Class Form1
         'picHome
         '
         Me.picHome.Image = CType(resources.GetObject("picHome.Image"), System.Drawing.Image)
-        Me.picHome.Location = New System.Drawing.Point(-4, 27)
+        Me.picHome.Location = New System.Drawing.Point(0, 27)
         Me.picHome.Name = "picHome"
         Me.picHome.Size = New System.Drawing.Size(588, 382)
         Me.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picHome.TabIndex = 5
         Me.picHome.TabStop = False
         '
-        'UpdateToolStripMenuItem
+        'btnFirstClass
         '
-        Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
-        Me.UpdateToolStripMenuItem.Text = "Update"
+        Me.btnFirstClass.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.btnFirstClass.Location = New System.Drawing.Point(44, 433)
+        Me.btnFirstClass.Name = "btnFirstClass"
+        Me.btnFirstClass.Size = New System.Drawing.Size(75, 23)
+        Me.btnFirstClass.TabIndex = 6
+        Me.btnFirstClass.Text = "First"
+        Me.btnFirstClass.UseVisualStyleBackColor = True
+        '
+        'btnNext
+        '
+        Me.btnNext.Location = New System.Drawing.Point(144, 433)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(75, 23)
+        Me.btnNext.TabIndex = 7
+        Me.btnNext.Text = "Button1"
+        Me.btnNext.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -175,6 +203,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(588, 481)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnNext)
+        Me.Controls.Add(Me.btnFirstClass)
         Me.Controls.Add(Me.picHome)
         Me.Controls.Add(Me.dgvStudent)
         Me.Controls.Add(Me.dgvInstructor)
@@ -209,4 +239,7 @@ Partial Class Form1
     Friend WithEvents dgvStudent As DataGridView
     Friend WithEvents picHome As PictureBox
     Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnFirstClass As Button
+    Friend WithEvents btnNext As Button
+    Friend WithEvents DetailsToolStripMenuItem As ToolStripMenuItem
 End Class

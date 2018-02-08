@@ -113,4 +113,15 @@
     Public Function getClassValue(ByVal column As String)
         Return dgvClass.Item(column, dgvClass.CurrentRow.Index).Value
     End Function
+
+
+
+    Private Sub DetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DetailsToolStripMenuItem.Click
+        If dgvStudent.Visible = True Then
+            Dim studentDetails As New DetailsStudent(getStudentID())
+            studentDetails.ShowDialog()
+
+
+        End If
+    End Sub
 End Class

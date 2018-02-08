@@ -16,4 +16,8 @@
             MsgBox("Age must be a number")
         End If
     End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Dispose()
+    End Sub
 End Class
