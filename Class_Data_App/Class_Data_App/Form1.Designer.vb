@@ -38,6 +38,10 @@ Partial Class Form1
         Me.InstructorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StudentDetailstoolStrip = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InstructordetailsToolStrip = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClassHeadToolStrip = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RosterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgvInstructor = New System.Windows.Forms.DataGridView()
         Me.dgvStudent = New System.Windows.Forms.DataGridView()
         Me.picHome = New System.Windows.Forms.PictureBox()
@@ -55,7 +59,9 @@ Partial Class Form1
         Me.dgvClass.AllowUserToOrderColumns = True
         Me.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClass.Location = New System.Drawing.Point(0, 27)
+        Me.dgvClass.MultiSelect = False
         Me.dgvClass.Name = "dgvClass"
+        Me.dgvClass.ReadOnly = True
         Me.dgvClass.Size = New System.Drawing.Size(584, 300)
         Me.dgvClass.TabIndex = 1
         Me.dgvClass.Visible = False
@@ -65,7 +71,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AddToolStripMenuItem, Me.ShowToolStripMenuItem, Me.UpdateToolStripMenuItem, Me.DetailsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(588, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(594, 24)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -79,13 +85,13 @@ Partial Class Form1
         'HomeToolStripMenuItem
         '
         Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HomeToolStripMenuItem.Text = "Home"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AddToolStripMenuItem
@@ -146,9 +152,35 @@ Partial Class Form1
         '
         'DetailsToolStripMenuItem
         '
+        Me.DetailsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentDetailstoolStrip, Me.InstructordetailsToolStrip, Me.ClassHeadToolStrip})
         Me.DetailsToolStripMenuItem.Name = "DetailsToolStripMenuItem"
         Me.DetailsToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.DetailsToolStripMenuItem.Text = "Details"
+        '
+        'StudentDetailstoolStrip
+        '
+        Me.StudentDetailstoolStrip.Name = "StudentDetailstoolStrip"
+        Me.StudentDetailstoolStrip.Size = New System.Drawing.Size(152, 22)
+        Me.StudentDetailstoolStrip.Text = "Student"
+        '
+        'InstructordetailsToolStrip
+        '
+        Me.InstructordetailsToolStrip.Name = "InstructordetailsToolStrip"
+        Me.InstructordetailsToolStrip.Size = New System.Drawing.Size(152, 22)
+        Me.InstructordetailsToolStrip.Text = "Instructor"
+        '
+        'ClassHeadToolStrip
+        '
+        Me.ClassHeadToolStrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RosterToolStripMenuItem})
+        Me.ClassHeadToolStrip.Name = "ClassHeadToolStrip"
+        Me.ClassHeadToolStrip.Size = New System.Drawing.Size(152, 22)
+        Me.ClassHeadToolStrip.Text = "Class"
+        '
+        'RosterToolStripMenuItem
+        '
+        Me.RosterToolStripMenuItem.Name = "RosterToolStripMenuItem"
+        Me.RosterToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RosterToolStripMenuItem.Text = "Roster"
         '
         'dgvInstructor
         '
@@ -201,7 +233,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(588, 481)
+        Me.ClientSize = New System.Drawing.Size(594, 481)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnFirstClass)
@@ -242,4 +274,8 @@ Partial Class Form1
     Friend WithEvents btnFirstClass As Button
     Friend WithEvents btnNext As Button
     Friend WithEvents DetailsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StudentDetailstoolStrip As ToolStripMenuItem
+    Friend WithEvents InstructordetailsToolStrip As ToolStripMenuItem
+    Friend WithEvents ClassHeadToolStrip As ToolStripMenuItem
+    Friend WithEvents RosterToolStripMenuItem As ToolStripMenuItem
 End Class

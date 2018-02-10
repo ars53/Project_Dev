@@ -11,6 +11,9 @@
         dgvStudent.Visible = False
         dgvInstructor.Visible = False
         picHome.Visible = False
+        StudentDetailstoolStrip.Enabled = False
+        InstructordetailsToolStrip.Enabled = False
+        ClassHeadToolStrip.Enabled = True
 
     End Sub
     Protected Sub loadStudents()
@@ -20,6 +23,10 @@
         dgvStudent.Visible = True
         dgvInstructor.Visible = False
         picHome.Visible = False
+        InstructordetailsToolStrip.Enabled = False
+        ClassHeadToolStrip.Enabled = False
+        StudentDetailstoolStrip.Enabled = True
+
     End Sub
     Protected Sub loadInstructors()
         db.sql = "Select * FROM Instructor"
@@ -29,6 +36,9 @@
         dgvStudent.Visible = False
         dgvInstructor.Visible = True
         picHome.Visible = False
+        StudentDetailstoolStrip.Enabled = False
+        ClassHeadToolStrip.Enabled = False
+        InstructordetailsToolStrip.Enabled = True
 
     End Sub
 
@@ -116,12 +126,52 @@
 
 
 
-    Private Sub DetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DetailsToolStripMenuItem.Click
-        If dgvStudent.Visible = True Then
+
+
+    Private Sub StudentToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles StudentDetailstoolStrip.Click
+        If picHome.Visible = True Then
+
+        Else
             Dim studentDetails As New DetailsStudent(getStudentID())
             studentDetails.ShowDialog()
-
-
+            loadStudents()
         End If
+
+    End Sub
+
+    Private Sub InstructorToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles InstructordetailsToolStrip.Click
+        If picHome.Visible = True Then
+
+        Else
+            Dim iDetails As New DetailsInstructor(getInstructorID())
+            iDetails.ShowDialog()
+            loadInstructors()
+        End If
+
+    End Sub
+
+    Private Sub RosterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RosterToolStripMenuItem.Click
+        If picHome.Visible = True Then
+        Else
+            Dim cDetails As New ClassRoster(getClassName())
+            cDetails.ShowDialog()
+            loadClasses()
+        End If
+
+
+    End Sub
+
+    Private Sub btnFirstClass_Click(sender As Object, e As EventArgs) Handles btnFirstClass.Click
+
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        dgvClass.Visible = False
+        dgvInstructor.Visible = False
+        dgvStudent.Visible = False
+        picHome.Visible = True
+        InstructordetailsToolStrip.Enabled = True
+        StudentDetailstoolStrip.Enabled = True
+        ClassHeadToolStrip.Enabled = True
     End Sub
 End Class

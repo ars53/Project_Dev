@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub DetailsStudent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        db.sql = "SELECT * FROM StudentDetails WHERE Student_ID = @id"
+        db.sql = "SELECT ClassName AS Class, Time, Room, InstructorName FROM StudentDetails WHERE Student_ID = @id"
         db.bind("@id", SID)
 
         db.fill(DataGridView1)

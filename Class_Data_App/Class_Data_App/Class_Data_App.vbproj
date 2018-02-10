@@ -90,11 +90,23 @@
     <Compile Include="AddTeacher.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClassRoster.Designer.vb">
+      <DependentUpon>ClassRoster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClassRoster.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="db.vb" />
     <Compile Include="DetailsClass.Designer.vb">
       <DependentUpon>DetailsClass.vb</DependentUpon>
     </Compile>
     <Compile Include="DetailsClass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsInstructor.Designer.vb">
+      <DependentUpon>DetailsInstructor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsInstructor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DetailsStudent.Designer.vb">
@@ -160,8 +172,14 @@
     <EmbeddedResource Include="AddTeacher.resx">
       <DependentUpon>AddTeacher.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClassRoster.resx">
+      <DependentUpon>ClassRoster.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetailsClass.resx">
       <DependentUpon>DetailsClass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsInstructor.resx">
+      <DependentUpon>DetailsInstructor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailsStudent.resx">
       <DependentUpon>DetailsStudent.vb</DependentUpon>
