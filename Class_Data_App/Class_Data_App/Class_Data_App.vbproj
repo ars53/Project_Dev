@@ -72,7 +72,49 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClass.Designer.vb">
+      <DependentUpon>AddClass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddClass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudent.Designer.vb">
+      <DependentUpon>AddStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeacher.Designer.vb">
+      <DependentUpon>AddTeacher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeacher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassRoster.Designer.vb">
+      <DependentUpon>ClassRoster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClassRoster.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="db.vb" />
+    <Compile Include="DetailsClass.Designer.vb">
+      <DependentUpon>DetailsClass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsClass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsInstructor.Designer.vb">
+      <DependentUpon>DetailsInstructor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsInstructor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsStudent.Designer.vb">
+      <DependentUpon>DetailsStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -101,8 +143,47 @@
     <Compile Include="SignIn.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UpdateClass.Designer.vb">
+      <DependentUpon>UpdateClass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInstructor.Designer.vb">
+      <DependentUpon>UpdateInstructor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInstructor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStudent.Designer.vb">
+      <DependentUpon>UpdateStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddClass.resx">
+      <DependentUpon>AddClass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacher.resx">
+      <DependentUpon>AddTeacher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassRoster.resx">
+      <DependentUpon>ClassRoster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsClass.resx">
+      <DependentUpon>DetailsClass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsInstructor.resx">
+      <DependentUpon>DetailsInstructor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsStudent.resx">
+      <DependentUpon>DetailsStudent.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +195,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClass.resx">
+      <DependentUpon>UpdateClass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInstructor.resx">
+      <DependentUpon>UpdateInstructor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStudent.resx">
+      <DependentUpon>UpdateStudent.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
