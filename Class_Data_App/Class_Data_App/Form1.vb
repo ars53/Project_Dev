@@ -1,8 +1,11 @@
 ﻿Public Class Form1
     Protected db As New db
     Private Sub btnLogout_Click(sender As Object, e As EventArgs)
+
         SignIn.Show()
-        Me.Dispose()
+
+
+        Me.Close()
     End Sub
     Protected Sub loadClasses()
         db.sql = "Select * FROM CLASS"
@@ -14,6 +17,10 @@
         StudentDetailstoolStrip.Enabled = False
         InstructordetailsToolStrip.Enabled = False
         ClassHeadToolStrip.Enabled = True
+        btnFirst.Visible = True
+        btnNext.Visible = True
+        btnLast.Visible = True
+        btnPrev.Visible = True
 
     End Sub
     Protected Sub loadStudents()
@@ -26,6 +33,10 @@
         InstructordetailsToolStrip.Enabled = False
         ClassHeadToolStrip.Enabled = False
         StudentDetailstoolStrip.Enabled = True
+        btnFirst.Visible = True
+        btnNext.Visible = True
+        btnLast.Visible = True
+        btnPrev.Visible = True
 
     End Sub
     Protected Sub loadInstructors()
@@ -39,6 +50,10 @@
         StudentDetailstoolStrip.Enabled = False
         ClassHeadToolStrip.Enabled = False
         InstructordetailsToolStrip.Enabled = True
+        btnFirst.Visible = True
+        btnNext.Visible = True
+        btnLast.Visible = True
+        btnPrev.Visible = True
 
     End Sub
 
@@ -161,7 +176,15 @@
 
     End Sub
 
-    Private Sub btnFirstClass_Click(sender As Object, e As EventArgs) Handles btnFirstClass.Click
+    Private Sub btnFirst_Click(sender As Object, e As EventArgs) Handles btnFirst.Click
+        If dgvClass.Visible = True Then
+            dgvClass.CurrentCell = dgvClass.Item(0, 0)
+        ElseIf dgvInstructor.Visible = True Then
+            dgvInstructor.CurrentCell = dgvInstructor.Item(0, 0)
+        ElseIf dgvStudent.Visible = True Then
+            dgvStudent.CurrentCell = dgvStudent.Item(0, 0)
+        End If
+
 
     End Sub
 
@@ -173,5 +196,93 @@
         InstructordetailsToolStrip.Enabled = True
         StudentDetailstoolStrip.Enabled = True
         ClassHeadToolStrip.Enabled = True
+        btnFirst.Visible = False
+        btnNext.Visible = False
+        btnLast.Visible = False
+        btnPrev.Visible = False
     End Sub
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        If dgvClass.Visible = True Then
+            Dim current_ROW As Integer = dgvClass.CurrentCell.RowIndex
+            Dim next_Row As Integer = dgvClass.CurrentCell.RowIndex + 1
+            Dim Max_row As Integer = dgvClass.Rows.Count
+
+            If Max_row = current_ROW Then
+                MsgBox("You have reached the end of the line")
+            ElseIf current_ROW < Max_row Then
+                dgvClass.CurrentCell = dgvClass.Item(0, next_Row)
+            End If
+        ElseIf dgvStudent.Visible = True Then
+            Dim current_ROW As Integer = dgvStudent.CurrentCell.RowIndex
+            Dim next_Row As Integer = dgvStudent.CurrentCell.RowIndex + 1
+            Dim Max_row As Integer = dgvStudent.Rows.Count
+
+            If Max_row = current_ROW Then
+            Else
+                dgvStudent.CurrentCell = dgvStudent.Item(0, next_Row)
+            End If
+        ElseIf dgvInstructor.Visible = True Then
+            Dim current_ROW As Integer = dgvInstructor.CurrentCell.RowIndex
+            Dim next_Row As Integer = dgvInstructor.CurrentCell.RowIndex + 1
+            Dim Max_row As Integer = dgvInstructor.Rows.Count
+
+            If Max_row = current_ROW Then
+            Else
+                dgvInstructor.CurrentCell = dgvInstructor.Item(0, next_Row)
+            End If
+
+        End If
+    End Sub
+
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+        If dgvClass.Visible = True Then
+            Dim current_ROW As Integer = dgvClass.CurrentCell.RowIndex
+            Dim next_Row As Integer = dgvClass.CurrentCell.RowIndex - 1
+            Dim Max_row As Integer = dgvClass.Rows.Count
+
+            If Max_row = current_ROW Then
+                MsgBox("You have reached the end of the line")
+            ElseIf current_ROW < Max_row Then
+                dgvClass.CurrentCell = dgvClass.Item(0, next_Row)
+            End If
+        ElseIf dgvStudent.Visible = True Then
+            Dim current_ROW As Integer = dgvStudent.CurrentCell.RowIndex
+            Dim next_Row As Integer = dgvStudent.CurrentCell.RowIndex - 1
+            Dim Max_row As Integer = dgvStudent.Rows.Count
+
+            If Max_row = current_ROW Then
+            Else
+                dgvStudent.CurrentCell = dgvStudent.Item(0, next_Row)
+            End If
+        ElseIf dgvInstructor.Visible = True Then
+            Dim current_ROW As Integer = dgvInstructor.CurrentCell.RowIndex
+            Dim next_Row As Integer = dgvInstructor.CurrentCell.RowIndex - 1
+            Dim Max_row As Integer = dgvInstructor.Rows.Count
+
+            If Max_row = current_ROW Then
+            Else
+                dgvInstructor.CurrentCell = dgvInstructor.Item(0, next_Row)
+            End If
+
+        End If
+    End Sub
+
+    Private Sub btnLast_Click(sender As Object, e As EventArgs) Handles btnLast.Click
+        If dgvClass.Visible = True Then
+            Dim max_row As Integer = dgvClass.Rows.Count - 1
+            Dim max_index As Integer = dgvClass.Rows(max_row).Index
+            dgvClass.CurrentCell = dgvClass.Item(0, max_index)
+        ElseIf dgvStudent.Visible = True Then
+            Dim max_row As Integer = dgvStudent.Rows.Count - 1
+            Dim max_index As Integer = dgvStudent.Rows(max_row).Index
+            dgvStudent.CurrentCell = dgvStudent.Item(0, max_index)
+        ElseIf dgvInstructor.Visible = True Then
+            Dim max_row As Integer = dgvInstructor.Rows.Count - 1
+            Dim max_index As Integer = dgvInstructor.Rows(max_row).Index
+            dgvInstructor.CurrentCell = dgvInstructor.Item(0, max_index)
+        End If
+    End Sub
+
+
 End Class
