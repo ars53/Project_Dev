@@ -31,5 +31,8 @@ Public Class SignIn
 
     Private Sub SignIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtUser.Focus()
+        txtPassword.Clear()
+        txtUser.Clear()
+
     End Sub
 End Class

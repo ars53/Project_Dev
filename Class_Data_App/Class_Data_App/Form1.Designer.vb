@@ -45,8 +45,10 @@ Partial Class Form1
         Me.dgvInstructor = New System.Windows.Forms.DataGridView()
         Me.dgvStudent = New System.Windows.Forms.DataGridView()
         Me.picHome = New System.Windows.Forms.PictureBox()
-        Me.btnFirstClass = New System.Windows.Forms.Button()
+        Me.btnFirst = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnPrev = New System.Windows.Forms.Button()
+        Me.btnLast = New System.Windows.Forms.Button()
         CType(Me.dgvClass, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvInstructor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,9 +58,10 @@ Partial Class Form1
         '
         'dgvClass
         '
+        Me.dgvClass.AllowUserToAddRows = False
         Me.dgvClass.AllowUserToOrderColumns = True
         Me.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvClass.Location = New System.Drawing.Point(0, 27)
+        Me.dgvClass.Location = New System.Drawing.Point(-2, 27)
         Me.dgvClass.MultiSelect = False
         Me.dgvClass.Name = "dgvClass"
         Me.dgvClass.ReadOnly = True
@@ -85,13 +88,13 @@ Partial Class Form1
         'HomeToolStripMenuItem
         '
         Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.HomeToolStripMenuItem.Text = "Home"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AddToolStripMenuItem
@@ -160,32 +163,33 @@ Partial Class Form1
         'StudentDetailstoolStrip
         '
         Me.StudentDetailstoolStrip.Name = "StudentDetailstoolStrip"
-        Me.StudentDetailstoolStrip.Size = New System.Drawing.Size(152, 22)
+        Me.StudentDetailstoolStrip.Size = New System.Drawing.Size(125, 22)
         Me.StudentDetailstoolStrip.Text = "Student"
         '
         'InstructordetailsToolStrip
         '
         Me.InstructordetailsToolStrip.Name = "InstructordetailsToolStrip"
-        Me.InstructordetailsToolStrip.Size = New System.Drawing.Size(152, 22)
+        Me.InstructordetailsToolStrip.Size = New System.Drawing.Size(125, 22)
         Me.InstructordetailsToolStrip.Text = "Instructor"
         '
         'ClassHeadToolStrip
         '
         Me.ClassHeadToolStrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RosterToolStripMenuItem})
         Me.ClassHeadToolStrip.Name = "ClassHeadToolStrip"
-        Me.ClassHeadToolStrip.Size = New System.Drawing.Size(152, 22)
+        Me.ClassHeadToolStrip.Size = New System.Drawing.Size(125, 22)
         Me.ClassHeadToolStrip.Text = "Class"
         '
         'RosterToolStripMenuItem
         '
         Me.RosterToolStripMenuItem.Name = "RosterToolStripMenuItem"
-        Me.RosterToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RosterToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.RosterToolStripMenuItem.Text = "Roster"
         '
         'dgvInstructor
         '
+        Me.dgvInstructor.AllowUserToAddRows = False
         Me.dgvInstructor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvInstructor.Location = New System.Drawing.Point(0, 27)
+        Me.dgvInstructor.Location = New System.Drawing.Point(-2, 27)
         Me.dgvInstructor.Name = "dgvInstructor"
         Me.dgvInstructor.Size = New System.Drawing.Size(584, 300)
         Me.dgvInstructor.TabIndex = 3
@@ -193,6 +197,7 @@ Partial Class Form1
         '
         'dgvStudent
         '
+        Me.dgvStudent.AllowUserToAddRows = False
         Me.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvStudent.Location = New System.Drawing.Point(0, 27)
         Me.dgvStudent.Name = "dgvStudent"
@@ -210,24 +215,46 @@ Partial Class Form1
         Me.picHome.TabIndex = 5
         Me.picHome.TabStop = False
         '
-        'btnFirstClass
+        'btnFirst
         '
-        Me.btnFirstClass.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.btnFirstClass.Location = New System.Drawing.Point(44, 433)
-        Me.btnFirstClass.Name = "btnFirstClass"
-        Me.btnFirstClass.Size = New System.Drawing.Size(75, 23)
-        Me.btnFirstClass.TabIndex = 6
-        Me.btnFirstClass.Text = "First"
-        Me.btnFirstClass.UseVisualStyleBackColor = True
+        Me.btnFirst.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.btnFirst.Location = New System.Drawing.Point(38, 433)
+        Me.btnFirst.Name = "btnFirst"
+        Me.btnFirst.Size = New System.Drawing.Size(75, 23)
+        Me.btnFirst.TabIndex = 6
+        Me.btnFirst.Text = "First"
+        Me.btnFirst.UseVisualStyleBackColor = True
+        Me.btnFirst.Visible = False
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(144, 433)
+        Me.btnNext.Location = New System.Drawing.Point(300, 433)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(75, 23)
         Me.btnNext.TabIndex = 7
-        Me.btnNext.Text = "Button1"
+        Me.btnNext.Text = "Next Row"
         Me.btnNext.UseVisualStyleBackColor = True
+        Me.btnNext.Visible = False
+        '
+        'btnPrev
+        '
+        Me.btnPrev.Location = New System.Drawing.Point(139, 433)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(112, 23)
+        Me.btnPrev.TabIndex = 8
+        Me.btnPrev.Text = "Previous Row"
+        Me.btnPrev.UseVisualStyleBackColor = True
+        Me.btnPrev.Visible = False
+        '
+        'btnLast
+        '
+        Me.btnLast.Location = New System.Drawing.Point(418, 432)
+        Me.btnLast.Name = "btnLast"
+        Me.btnLast.Size = New System.Drawing.Size(75, 23)
+        Me.btnLast.TabIndex = 9
+        Me.btnLast.Text = "Last Row"
+        Me.btnLast.UseVisualStyleBackColor = True
+        Me.btnLast.Visible = False
         '
         'Form1
         '
@@ -235,8 +262,10 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(594, 481)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnLast)
+        Me.Controls.Add(Me.btnPrev)
         Me.Controls.Add(Me.btnNext)
-        Me.Controls.Add(Me.btnFirstClass)
+        Me.Controls.Add(Me.btnFirst)
         Me.Controls.Add(Me.picHome)
         Me.Controls.Add(Me.dgvStudent)
         Me.Controls.Add(Me.dgvInstructor)
@@ -271,11 +300,13 @@ Partial Class Form1
     Friend WithEvents dgvStudent As DataGridView
     Friend WithEvents picHome As PictureBox
     Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents btnFirstClass As Button
+    Friend WithEvents btnFirst As Button
     Friend WithEvents btnNext As Button
     Friend WithEvents DetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentDetailstoolStrip As ToolStripMenuItem
     Friend WithEvents InstructordetailsToolStrip As ToolStripMenuItem
     Friend WithEvents ClassHeadToolStrip As ToolStripMenuItem
     Friend WithEvents RosterToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnPrev As Button
+    Friend WithEvents btnLast As Button
 End Class
