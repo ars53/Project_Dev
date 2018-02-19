@@ -206,7 +206,7 @@
         If dgvClass.Visible = True Then
             Dim current_ROW As Integer = dgvClass.CurrentCell.RowIndex
             Dim next_Row As Integer = dgvClass.CurrentCell.RowIndex + 1
-            Dim Max_row As Integer = dgvClass.Rows.Count
+            Dim Max_row As Integer = dgvClass.Rows.Count - 1
 
             If Max_row = current_ROW Then
                 MsgBox("You have reached the end of the line")
@@ -216,18 +216,21 @@
         ElseIf dgvStudent.Visible = True Then
             Dim current_ROW As Integer = dgvStudent.CurrentCell.RowIndex
             Dim next_Row As Integer = dgvStudent.CurrentCell.RowIndex + 1
-            Dim Max_row As Integer = dgvStudent.Rows.Count
+            Dim Max_row As Integer = dgvStudent.Rows.Count - 1
 
             If Max_row = current_ROW Then
+                MsgBox("You have reached the end of the line")
             Else
                 dgvStudent.CurrentCell = dgvStudent.Item(0, next_Row)
             End If
         ElseIf dgvInstructor.Visible = True Then
             Dim current_ROW As Integer = dgvInstructor.CurrentCell.RowIndex
             Dim next_Row As Integer = dgvInstructor.CurrentCell.RowIndex + 1
-            Dim Max_row As Integer = dgvInstructor.Rows.Count
+            Dim Max_row As Integer = dgvInstructor.Rows.Count - 1
+
 
             If Max_row = current_ROW Then
+                MsgBox("You have reached the end of the line")
             Else
                 dgvInstructor.CurrentCell = dgvInstructor.Item(0, next_Row)
             End If
@@ -241,8 +244,8 @@
             Dim next_Row As Integer = dgvClass.CurrentCell.RowIndex - 1
             Dim Max_row As Integer = dgvClass.Rows.Count
 
-            If Max_row = current_ROW Then
-                MsgBox("You have reached the end of the line")
+            If dgvClass.CurrentCellAddress.Y = 0 Then
+                MsgBox("You are currently on the first row")
             ElseIf current_ROW < Max_row Then
                 dgvClass.CurrentCell = dgvClass.Item(0, next_Row)
             End If
@@ -251,7 +254,8 @@
             Dim next_Row As Integer = dgvStudent.CurrentCell.RowIndex - 1
             Dim Max_row As Integer = dgvStudent.Rows.Count
 
-            If Max_row = current_ROW Then
+            If dgvStudent.CurrentCellAddress.Y = 0 Then
+                MsgBox("You are currently on the first row")
             Else
                 dgvStudent.CurrentCell = dgvStudent.Item(0, next_Row)
             End If
@@ -260,7 +264,8 @@
             Dim next_Row As Integer = dgvInstructor.CurrentCell.RowIndex - 1
             Dim Max_row As Integer = dgvInstructor.Rows.Count
 
-            If Max_row = current_ROW Then
+            If dgvInstructor.CurrentCellAddress.Y = 0 Then
+                MsgBox("You are currently on the first row")
             Else
                 dgvInstructor.CurrentCell = dgvInstructor.Item(0, next_Row)
             End If
@@ -284,5 +289,7 @@
         End If
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

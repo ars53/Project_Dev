@@ -132,19 +132,19 @@ Partial Class Form1
         'ClassesToolStripMenuItem
         '
         Me.ClassesToolStripMenuItem.Name = "ClassesToolStripMenuItem"
-        Me.ClassesToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.ClassesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ClassesToolStripMenuItem.Text = "Classes"
         '
         'StudentsToolStripMenuItem
         '
         Me.StudentsToolStripMenuItem.Name = "StudentsToolStripMenuItem"
-        Me.StudentsToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.StudentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.StudentsToolStripMenuItem.Text = "Students"
         '
         'InstructorsToolStripMenuItem
         '
         Me.InstructorsToolStripMenuItem.Name = "InstructorsToolStripMenuItem"
-        Me.InstructorsToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.InstructorsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InstructorsToolStripMenuItem.Text = "Instructors"
         '
         'UpdateToolStripMenuItem
